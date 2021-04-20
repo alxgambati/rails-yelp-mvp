@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Content</th>
+      <th>Restaurant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.rating %></td>
+        <td><%= review.content %></td>
+        <td><%= review.restaurant_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Go Back', restaurants_path, class: "btn btn-primary" %>
