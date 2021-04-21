@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
   # GET /reviews or /reviews.json
   def index
     @reviews = Review.where(restaurant_id: params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   # GET /reviews/1 or /reviews/1.json
